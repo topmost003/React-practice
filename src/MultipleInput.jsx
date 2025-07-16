@@ -6,9 +6,15 @@ const MultipleInput = () => {
         lastname:""
     })
 
+    const [user,setusers] =([])
+
+    function submit(e){
+        e.preventDefault()
+    }
+
   return (
     <div>
-      <form >
+      <form className='grid gap-2.5'  >
      <input type="text" 
       placeholder='firstname' 
       value={myname.firstname} 
@@ -21,9 +27,21 @@ const MultipleInput = () => {
       value={myname.lastname} 
       onChange={(e)=> setmyname({...myname,lastname:e.target.value})}/>
 
-
+     <button onClick={submit}>submit</button>
 
       </form>
+
+
+
+      {/* <div>
+  {myname.map((data,i) => (
+<div key={i}>
+    <p>{data.firstname}</p>
+    <p>{data.lastname}</p>
+</div>
+  ))}
+
+      </div> */}
     </div>
   )
 }
