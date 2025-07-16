@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4.2em;
+  line-height: 1.1;
+}
+
+button,input {
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: aqua;
+  margin-top: 30px;
+  
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
