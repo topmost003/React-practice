@@ -6,42 +6,50 @@ const MultipleInput = () => {
         lastname:""
     })
 
-    const [user,setusers] =([])
+     const [users, setUsers] = useState([]);
+
 
     function submit(e){
         e.preventDefault()
+
+     setUsers([...users,myname])
+     setmyname({firstname:("") , lastname:("")})
+
+
     }
 
   return (
-    <div>
-      <form className='grid gap-2.5'  >
+    <div className='w-[300px] ' >
+      <form onSubmit={submit}>
      <input type="text" 
+     name='firstname'
       placeholder='firstname' 
       value={myname.firstname} 
-      onChange={(e)=> setmyname({...myname,firstname:e.target.value})}/>
-
-
-
+      onChange={(e)=> setmyname({...myname,[e.target.name]:e.target.value})}/>
+   
+    
      <input type="text" 
+     name='lastname'
       placeholder='lastname' 
       value={myname.lastname} 
-      onChange={(e)=> setmyname({...myname,lastname:e.target.value})}/>
+      onChange={(e)=> setmyname({...myname,[ e.target.name]: e.target.value})}/>
+  
 
-     <button onClick={submit}>submit</button>
+     <button type='submit'>submit</button>
 
       </form>
 
 
 
-      {/* <div>
-  {myname.map((data,i) => (
-<div key={i}>
+      <div>
+  {users.map((data,i) => (
+<div key={i} className='bg-black text-white my-2.5 rounded-[8px]'>
     <p>{data.firstname}</p>
     <p>{data.lastname}</p>
 </div>
   ))}
 
-      </div> */}
+      </div>
     </div>
   )
 }
