@@ -13,6 +13,15 @@ e.preventDefault()
   // console.log(todo)
   }
 
+
+  function removeTodo(remove) {
+
+    setTodos(todos.filter((todo) => todo !== remove))
+
+  }
+
+
+ 
   return (
     <div className="m-auto w-[1220px]  mt-6">
    
@@ -28,10 +37,12 @@ e.preventDefault()
   </form>
 
 
-<div className="pt-7 grid grid-cols-4">
+<div className="pt-7 grid">
 {todos.map((data,i) => (
-    <div key={i} className="  bg-amber-400 my-2 p-3   rounded-2xl w-[300px]">
-     <li>{data.todo}</li> 
+    <div key={i} className="  bg-purple-400 my-2 p-3   rounded-2xl w-[300px]">
+     <li className="flex justify-between">{data.todo}
+       <span><button onClick={()=>removeTodo(data)}>❌</button></span></li> 
+    
     </div>
   ))}
 </div>
@@ -43,5 +54,6 @@ e.preventDefault()
     </div>
   )
 }
+
 
 export default TodoApp
