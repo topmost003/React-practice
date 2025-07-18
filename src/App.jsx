@@ -9,6 +9,7 @@ import ConditionalRendering from "./ConditionalRendering"
 import Counter from "./Counter"
 import Form from "./Form"
 import MultipleInput from "./MultipleInput"
+import TodoApp from "./TodoApp"
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
      {/* <ConditionalRendering/> */}
      {/* <Counter/> */}
     {/* <Form/> */}
-    <MultipleInput/>
+    {/* <MultipleInput/> */}
+    <TodoApp/>
 
 
     

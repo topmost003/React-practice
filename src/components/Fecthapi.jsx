@@ -4,7 +4,7 @@ import { useState,useEffect } from "react"
 const Fecthapi = () => {
   const [fetchapi , setFetchapi] = useState([])
 
-  const postapi = async()  => {
+  const postapi = async()=> {
     await  fetch ("https://jsonplaceholder.typicode.com/posts")
           .then((res) => res.json())
            .then((data) => setFetchapi(data))
