@@ -10,6 +10,8 @@ import Counter from "./Counter"
 import Form from "./Form"
 import MultipleInput from "./MultipleInput"
 import TodoApp from "./TodoApp"
+import RevivedApi from "./RevivedApi"
+import FormhandlingRevised from "../FormhandlingRevised"
 
 
 function App() {
@@ -17,18 +19,19 @@ function App() {
   return (
     <>
      <h1 className="bg-red-600 text-center">working</h1>
-     {/* <Fetchapi/> */}
-     {/* <Marketplace/> */}
-     {/* <Cards/> */}
-     {/* <FormHandling/> */}
-     {/* <NewApi/> */}
-     {/* <Map/> */}
-     {/* <ConditionalRendering/> */}
-     {/* <Counter/> */}
-    {/* <Form/> */}
-    {/* <MultipleInput/> */}
-    <TodoApp/>
-
+     {/* <Fetchapi/>  */}
+     {/* <Marketplace/>
+     <Cards/>
+     <FormHandling/>
+     <NewApi/>
+     <Map/>
+     <ConditionalRendering/>
+     <Counter/>
+    <Form/>
+    <MultipleInput/>
+    <TodoApp/> */}
+    <RevivedApi/>
+   <FormhandlingRevised/>
 
     
     </>
